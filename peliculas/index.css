@@ -1,0 +1,245 @@
+/*peliculas*/
+
+
+ul, li {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+body {
+	margin: 0;
+	font-family: arial;
+	transition: 0.2s;
+}
+menu {
+	margin: 0;
+	padding: 0;
+}
+.grid-container {
+	display: grid;
+	width: 100%;	
+	height: 100vh;
+	margin: 0;
+	grid-template-columns: 150px 1fr;
+	grid-template-rows: 100px 1fr;
+	grid-template-areas: 	"header header" 
+							"menu contenido";
+}
+
+.header {	
+	grid-area: header;
+	position: relative;	
+}
+.header-container {
+	padding: 0 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	/*border: 1px solid red;*/	
+	align-items: center;	
+}
+.logo {
+	display: flex;
+	align-items: center;
+	font-family: arial;
+	font-weight: 900;
+	color: white;
+	font-size: 24px;
+	text-shadow: rgb(235, 78, 56) 3px 0px 0px, rgb(235, 78, 56) 2.83487px 0.981584px 0px, rgb(235, 78, 56) 2.35766px 1.85511px 0px, rgb(235, 78, 56) 1.62091px 2.52441px 0px, rgb(235, 78, 56) 0.705713px 2.91581px 0px, rgb(235, 78, 56) -0.287171px 2.98622px 0px, rgb(235, 78, 56) -1.24844px 2.72789px 0px, rgb(235, 78, 56) -2.07227px 2.16926px 0px, rgb(235, 78, 56) -2.66798px 1.37182px 0px, rgb(235, 78, 56) -2.96998px 0.42336px 0px, rgb(235, 78, 56) -2.94502px -0.571704px 0px, rgb(235, 78, 56) -2.59586px -1.50383px 0px, rgb(235, 78, 56) -1.96093px -2.27041px 0px, rgb(235, 78, 56) -1.11013px -2.78704px 0px, rgb(235, 78, 56) -0.137119px -2.99686px 0px, rgb(235, 78, 56) 0.850987px -2.87677px 0px, rgb(235, 78, 56) 1.74541px -2.43999px 0px, rgb(235, 78, 56) 2.44769px -1.73459px 0px, rgb(235, 78, 56) 2.88051px -0.838247px 0px;
+
+}
+.logo img {
+	height: 80px;
+	width: auto;	
+	margin-right: 8px;
+}
+.buscador {	
+	padding: 0 30px;
+	text-align: center;	
+}
+.buscador input {
+	width: 80%;
+	max-width: 500px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid rgba(221, 69, 42, 0.5);
+	font-size: 16px;
+
+}
+.usuario {
+	display: flex;
+	align-items: center;
+}
+
+.nombre {
+	font-size: 20px;
+	font-weight: 700;
+}
+.avatar {
+	margin: 0 15px;
+}
+.avatar img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	fit-content: cover;
+	border: 2px solid rgba(0,0,0,0.2)
+}
+.usuario .conf {
+	display: flex;
+	font-size: 24px;
+	height: 40px;
+	width: 40px;	
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: 0.2s;
+}
+.usuario .conf:hover {
+	background-color: rgba(221, 69, 42, 0.2);
+
+}
+.menu {
+	grid-area: menu;				
+	/*border: 1px solid red;*/
+	font-size: 32px;
+	color: white;
+	background-color: rgb(221, 69, 42);	
+}
+.menu ul {	
+	display: grid;
+	height: 100%;
+	grid-template-rows: repeat(3, auto) 1fr;		
+}
+.menu ul li {
+	width: 100%;		
+}
+.menu ul li a {
+	color: white;	
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+	padding: 20px 0;	
+	transition: 0.2s;
+}
+.menu ul li:last-child {
+	align-self: end;
+}
+.menu ul li a:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.menu i {
+	display: block;
+
+}
+.menu span {
+	display: block;
+	font-size: 16px;	
+}
+.menu .setting {
+	align-self: end;
+	padding: 0;
+}
+.contenido {
+	padding: 0 30px;
+	grid-area: contenido;
+	overflow: auto;	
+}
+.contenido section .peliculas {
+	grid-area: contenido;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+	/*border: 1px solid red;*/
+}
+.contenido h2 {
+	margin-top: 60px;
+}
+.pelicula {		
+	position: relative;
+	cursor: pointer;
+}
+.pelicula img {
+	max-width: 100%;
+	height: auto;
+}
+.copy {
+	padding: 15px;
+	position: absolute;	
+	right: 0;
+	bottom: 4px;
+	left: 0;
+	max-height: 80%;
+	background-color: rgba(0,0,0, 0.8);	
+	overflow: auto;
+}
+.titulo {
+	font-size: 20px;
+	color: white;
+	margin-bottom: 10px;
+	font-weight: 700;
+	
+}
+.resumen {		
+	color: white;
+	display: none;
+	line-height: 1.5;	
+}
+.pelicula:hover .resumen {
+	display: block;
+}
+
+@media screen and (max-width: 1200px) {
+
+	.contenido section .peliculas {	
+		grid-template-columns: repeat(3, 1fr);		
+	}	
+}
+
+@media screen and (max-width: 768px) {
+
+	.grid-container {
+		display: grid;
+		width: 100%;	
+		height: 100vh;
+		margin: 0;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100px auto 1fr;
+		grid-template-areas: 	"header"
+								"menu" 
+								"contenido";
+	}
+	.menu ul {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		align-items: center;		 		
+	}
+	.menu ul li a{
+		/*padding: 5px 15px;*/
+	}
+
+
+	.contenido section .peliculas {	
+		grid-template-columns: repeat(2, 1fr);		
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.contenido section .peliculas {	
+		grid-template-columns: 1fr;		
+	}
+	.contenido {
+		padding: 8px;
+	}
+}
